@@ -73,4 +73,4 @@ def making_maintf():
 
 if __name__== "__main__":
     main()
-    os.remove("../terratest")
+    # os.remove("../terratest")
