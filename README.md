@@ -25,10 +25,10 @@ go test
  * examples/main.tf
  * examples/variables.tf
  * examples/outputs.tf
- * [test/tf_module_test.go]
+ * [test/tf_module_test.go](%7B%7B%20cookiecutter.terratest_folder_name%20%7D%7D/test/tf_module_test.go)
 
 
-## [tf_module_test.go](%7B%7B%20cookiecutter.terratest_folder_name%20%7D%7D/test/tf_module_test.go)
+## tf_module_test.go
 In order to avoid a name conflict during execution, a random line of text is added to the name of the resource. By default, the name is set by the parameter "name" in the description of the structure that is passed to the module as input parameters.
 ```hcl
 Vars: map[string]interface{}{
