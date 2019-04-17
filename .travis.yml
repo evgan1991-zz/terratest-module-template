@@ -1,0 +1,12 @@
+dist: xenial
+sudo: required
+
+language: python
+python:
+  - "2.7"
+
+services:
+  - docker
+
+script:
+  - sonar-scanner   -Dsonar.projectKey=evgan1991_terratest-module-template   -Dsonar.organization=evgan1991-github   -Dsonar.sources=.   -Dsonar.host.url=https://sonarcloud.io   -Dsonar.login=edc0e919e43c67f515c677af193efcc8d1eb1f5a

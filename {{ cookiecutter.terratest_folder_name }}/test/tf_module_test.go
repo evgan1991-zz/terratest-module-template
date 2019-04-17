@@ -13,7 +13,7 @@ var terraformDirectory = "../examples"
 var region             = "{{ cookiecutter.aws_region }}"
 var account            = ""
 
-func Test_SetUp(t *testing.T) {
+func TestSetUp(t *testing.T) {
     rand.Seed(time.Now().UnixNano())
 
     terraformOptions := &terraform.Options{
