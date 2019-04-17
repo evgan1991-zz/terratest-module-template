@@ -1,4 +1,3 @@
-# import os
 import re
 
 def main():
@@ -10,6 +9,7 @@ def main():
         print("Warning! Require vriable: " + require_vars[__index__])
 
 
+
 def get_namelist(prefix, postfix, file_path):
     array = []
     file = open(file_path)
@@ -19,11 +19,13 @@ def get_namelist(prefix, postfix, file_path):
     return array
 
 
+
 def find_word(regexp, line, cut_prefix = "", cut_postfix = ""):
     result = re.match(regexp, line)
     if result:
         raw_string = "{}".format(result.group(0))
         return raw_string[len(cut_prefix):len(raw_string)-len(cut_postfix)]
+
 
 
 def text_addition(file_path, test_postfix):
@@ -35,7 +37,7 @@ def text_addition(file_path, test_postfix):
 
 def spaces_generator(count):
     spases = ""
-    for i in range(count):
+    for _ in range(count):
         spases = spases + " "
     return spases
 
@@ -119,15 +121,11 @@ def check_require_vars(varfile_path):
             if result:
                 flag = True
 
-        if flag != True:
-            if find_word("^" + prefix + "[A-z]*" + postfix + "$", variable_array[__index__][0]):
-                array.append(find_word("^" + prefix + "[A-z]*" + postfix + "$", variable_array[__index__][0], prefix, postfix))
+        if flag != True and find_word("^" + prefix + "[A-z]*" + postfix + "$", variable_array[__index__][0]):
+            array.append(find_word("^" + prefix + "[A-z]*" + postfix + "$", variable_array[__index__][0], prefix, postfix))
     return array
-
-
 
 
 
 if __name__== "__main__":
     main()
-    # os.remove("../terratest")

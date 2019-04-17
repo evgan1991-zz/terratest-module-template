@@ -1,0 +1,18 @@
+dist: xenial
+sudo: required
+
+language: python
+python:
+  - "2.7"
+
+services:
+  - docker
+
+before_script:
+  - sudo apt-get update -y
+  - sudo apt-get install unzip -y
+  - curl --insecure -OL https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.2.768.zip
+  - unzip sonar-scanner-cli-3.0.2.768.zip
+
+script:
+  - ./sonar-scanner-3.0.2.768/bin/sonar-scanner -Dsonar.projectKey=evgan1991_terratest-module-template -Dsonar.organization=evgan1991-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=edc0e919e43c67f515c677af193efcc8d1eb1f5a
