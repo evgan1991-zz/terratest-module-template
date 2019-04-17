@@ -1,0 +1,5 @@
+{
+    "terratest_folder_name": "terratest",
+    "aws_region": "us-east-1",
+    "example_module_name": "example_module"
+}
