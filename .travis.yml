@@ -15,4 +15,4 @@ before_script:
   - unzip sonar-scanner-cli-3.0.2.768.zip
 
 script:
-  - ./sonar-scanner -Dsonar.projectKey=evgan1991_terratest-module-template -Dsonar.organization=evgan1991-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=edc0e919e43c67f515c677af193efcc8d1eb1f5a
+  - ./sonar-scanner-3.0.2.768/bin/sonar-scanner -Dsonar.projectKey=evgan1991_terratest-module-template -Dsonar.organization=evgan1991-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=edc0e919e43c67f515c677af193efcc8d1eb1f5a
